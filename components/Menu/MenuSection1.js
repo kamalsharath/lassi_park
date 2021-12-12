@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const useStyles = makeStyles((theme) => ({
   mn: {
@@ -15,6 +16,14 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     alignContent: "center",
     gap: "2rem",
+    margin: "2rem 0rem 0rem 0rem",
+
+    boxShadow:
+      "0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%)",
+    "&:hover": {
+      border: "1px solid",
+      color: "white",
+    },
   },
   img1: {
     width: "200",
@@ -24,7 +33,6 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     alignContent: "center",
-    
   },
   text: {
     display: "flex",
@@ -49,6 +57,16 @@ const useStyles = makeStyles((theme) => ({
       color: "black",
     },
   },
+  juice: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignContent: "center",
+    fontSize: "30px",
+    margin: "2rem",
+    width: "100%",
+    color: "white",
+  },
 }));
 
 const MenuSection1 = () => {
@@ -56,6 +74,14 @@ const MenuSection1 = () => {
 
   return (
     <div className={classes.mn}>
+      <div className={classes.juice}>
+        <motion.div
+          animate={{ x: 100 }}
+          transition={{ ease: "easeOut", duration: 2 }}
+        >
+          <h1>ICE CREAMS</h1>
+        </motion.div>
+      </div>
       <div className={classes.root}>
         <div className={classes.img1}>
           <Image

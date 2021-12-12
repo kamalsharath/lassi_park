@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const useStyles = makeStyles((theme) => ({
   mn: {
@@ -15,6 +16,13 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     alignContent: "center",
     gap: "2rem",
+    margin: "2rem 0rem 0rem 0rem",
+    boxShadow:
+      "0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 100%)",
+    "&:hover": {
+      border: "1px solid",
+      color: "white",
+    },
   },
   img: {
     width: "200",
@@ -60,7 +68,12 @@ const MenuSection2 = () => {
   return (
     <div className={classes.mn}>
       <div className={classes.juice}>
-        <h1>Juice & Milkshakes</h1>
+        <motion.div
+          animate={{ x: 100 }}
+          transition={{ ease: "easeOut", duration: 4 }}
+        >
+          <h1>Juice & Milkshakes</h1>
+        </motion.div>
       </div>
       <div className={classes.root}>
         <div className={classes.img}>

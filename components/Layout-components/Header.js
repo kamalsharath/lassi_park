@@ -5,14 +5,16 @@ import makeStyles from "@material-ui/core/styles/makeStyles";
 
 const useStyles = makeStyles((theme) => ({
   hh: {
-    backgroundColor: "#2d2d2d",
-    padding: "1rem 1rem 0rem 1rem",
+    backgroundColor: "#232b2b",
+    padding: "1rem 1rem 1rem 1rem",
     margin: "0rem 0rem 0rem 0rem",
     gap: "1rem",
     display: "flex",
     color: "white",
     // flexDirection: "row",
     justifyContent: "space-between",
+    boxShadow:
+      "0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%)",
 
     // alignItems: "center",
   },
@@ -43,7 +45,7 @@ const Header = () => {
         <Image
           src={"/treats-ice-creram.gif"}
           width={50}
-          height={40}
+          height={30}
           alt="shfois"
         />
         <h6>LASSI PARK</h6>

@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
+    border: "4px solid",
   },
   frm: {
     margin: "3rem 0",
@@ -41,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     height: "50px",
     fontSize: "20px",
     borderRadius: "10px",
-    margin: "2px 0px 0px 0px",
+    margin: "2px 0px 2px 0px",
 
     "&:hover": {
       backgroundColor: "white",
@@ -52,6 +53,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-end",
+    margin: "2px 0px 20px 0px",
   },
   clah: {
     display: "flex",

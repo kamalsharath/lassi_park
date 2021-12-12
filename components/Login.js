@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     height: "100vh",
     width: "100%",
-    padding: "0rem 0rem 0rem 6rem",
+    padding: "1rem 0rem 0rem 6rem",
     backgroundImage: "url(bg.jpg)",
     backgroundSize: "cover",
   },

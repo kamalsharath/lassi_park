@@ -20,12 +20,12 @@ const Page404 = () => {
         <div className={classes.Page404}>
           <h1>404</h1>
           <Image
-            src="treats-ice-creram.gif"
+            src={"/treats-ice-creram.gif"}
             width={200}
             height={200}
             alt="ahfiua"
           />
-          <p>Page not found</p>
+          <h2>Page not found</h2>
         </div>
       </Layout>
     </React.Fragment>

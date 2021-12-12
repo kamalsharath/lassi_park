@@ -1,5 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
+import { motion } from "framer-motion";
+
 const useStyles = makeStyles((theme) => ({
   setcion: {
     display: "flex",
@@ -28,7 +30,12 @@ const SectionOne = () => {
   const classes = useStyles();
   return (
     <div className={classes.setcion}>
-      <div className={classes.anim}>THE LASSI AND JUICE PARK</div>
+      <motion.div
+        animate={{ x: 100 }}
+        transition={{ ease: "easeOut", duration: 2 }}
+      >
+        <div className={classes.anim}>THE LASSI AND JUICE PARK</div>
+      </motion.div>
     </div>
   );
 };

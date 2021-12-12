@@ -10,7 +10,7 @@ import FooterCopyright from "./Copyright";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: "#2d2d2d",
+    backgroundColor: "#232b2b",
     color: "#ffffff",
     boxShadow:
       "0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%)",
@@ -30,12 +30,10 @@ const Footer = () => {
   return (
     <React.Fragment>
       <div className={classes.root}>
-        <LjpContainer>
-          <div className={classes.r}>
-            <FooterCopyright />
-            <FooterSocialIcons />
-          </div>
-        </LjpContainer>
+        <div className={classes.r}>
+          <FooterCopyright />
+          <FooterSocialIcons />
+        </div>
       </div>
     </React.Fragment>
   );
