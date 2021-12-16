@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-around",
     alignItems: "center",
     backgroundColor: "#f5f5f5",
-    backgroundImage: "url(2kTg.gif)",
+    backgroundImage: "url(bag.jpg)",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
 
@@ -21,9 +21,9 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "50px",
     fontWeight: "bold",
     color: "white",
-    textAlign: "center",
-    position: "relative",
-    top: "35%",
+    // textAlign: "center",
+    // position: "absolute",
+    // top: "25%",
   },
 }));
 const SectionOne = () => {
@@ -31,8 +31,8 @@ const SectionOne = () => {
   return (
     <div className={classes.setcion}>
       <motion.div
-        animate={{ x: 100 }}
-        transition={{ ease: "easeOut", duration: 2 }}
+        animate={{ x: -80, y: -200 }}
+        transition={{ ease: "easeOut", duration: 3 }}
       >
         <div className={classes.anim}>THE LASSI AND JUICE PARK</div>
       </motion.div>
