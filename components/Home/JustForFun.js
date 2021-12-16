@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     height: "100vh",
-    boxShadow: " 0 0rem 12px 0.2rem rgb(88 88 88 / 80%)",
+    boxShadow: " 0 0 1rem 0.2rem rgb(0 0 0 / 80%)",
     padding: "0px 50px 0px 0px",
   },
   megaContainer1: {
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     height: "100vh",
-    boxShadow: " 0 0rem 1rem 0.2rem rgb(88 88 88 / 80%)",
+    boxShadow: " 0 0 1rem 0.2rem rgb(0 0 0 / 80%)",
   },
   megaContainer2: {
     backgroundImage: `url(s3.jpg)`,
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     height: "100vh",
-    boxShadow: " 0 0rem 12px 0.2rem rgb(88 88 88 / 80%)",
+    boxShadow: " 0 0 1rem 0.2rem rgb(0 0 0 / 80%)",
 
     marginBottom: "10rem",
   },
@@ -86,7 +86,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "flex-end",
     alignItems: "center",
     color: "#ffffff",
-    padding: "28rem 0rem 0rem 70rem",
+    padding: "23rem 0rem 0rem 55rem",
   },
   text1: {
     display: "flex",
@@ -94,14 +94,17 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "flex-end",
     alignItems: "center",
     color: "#ffffff",
-    padding: "28rem 0rem 0rem 70rem",
+    padding: "20rem 0rem 0rem 55rem",
   },
   text2: {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    alignItems: "flex-end",
+    alignItems: "center",
+    width: "100%",
+    height: "100vh",
     color: "#ffffff",
+    padding: "0rem 0rem 0rem 7rem",
   },
 }));
 const JustForFun = (props) => {
@@ -143,11 +146,9 @@ const JustForFun = (props) => {
       </div>
       <div className={classes.megaContainer2}>
         <div className={classes.text2}>
-          <Typography
-            variant="h1"
-            component="h1"
-            className={classes.heading}
-          ></Typography>
+          <Typography variant="h1" component="h1" className={classes.heading}>
+            Juice
+          </Typography>
           <Typography
             variant="h3"
             component="h3"

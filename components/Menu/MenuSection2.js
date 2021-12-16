@@ -60,6 +60,15 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     color: "white",
   },
+  rate: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignContent: "center",
+    fontSize: "20px",
+    width: "100%",
+    color: "red",
+  },
 }));
 
 const MenuSection2 = () => {
@@ -85,6 +94,7 @@ const MenuSection2 = () => {
           that then twat. This that then twat. This that then twat. This that
           then twat. This that then twat. This that then twat. This that then
           twat.This that then twat. This that then twat.
+          <div className={classes.rate}>rate: 109$</div>
           <button className={classes.bt}>Order Now</button>
         </div>
       </div>
@@ -103,6 +113,7 @@ const MenuSection2 = () => {
           that then twat. This that then twat. This that then twat. This that
           then twat. This that then twat. This that then twat. This that then
           twat.This that then twat. This that then twat.
+          <div className={classes.rate}>rate: 116$</div>
           <button className={classes.bt}>Order Now</button>
         </div>
       </div>
@@ -116,6 +127,7 @@ const MenuSection2 = () => {
           that then twat. This that then twat. This that then twat. This that
           then twat. This that then twat. This that then twat. This that then
           twat.This that then twat. This that then twat.
+          <div className={classes.rate}>rate: 101$</div>
           <button className={classes.bt}>Order Now</button>
         </div>
       </div>
