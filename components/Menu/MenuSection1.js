@@ -2,6 +2,8 @@ import React from "react";
 import { makeStyles } from "@material-ui/styles";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Snackbar } from "@material-ui/core";
+import MuiAlert from "@material-ui/lab/Alert";
 
 const useStyles = makeStyles((theme) => ({
   mn: {
@@ -78,72 +80,105 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
+
 const MenuSection1 = () => {
   const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
 
+  const handleClick = (event) => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpen(false);
+  };
   return (
-    <div className={classes.mn}>
-      <div className={classes.juice}>
-        <motion.div
-          animate={{ x: 100 }}
-          transition={{ ease: "easeOut", duration: 2 }}
-        >
-          <h1>ICE CREAMS</h1>
-        </motion.div>
+    <>
+      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="success">
+          Added to cart
+        </Alert>
+      </Snackbar>
+      <div className={classes.mn}>
+        <div className={classes.juice}>
+          <motion.div
+            animate={{ x: 100 }}
+            transition={{ ease: "easeOut", duration: 2 }}
+          >
+            <h1>ICE CREAMS</h1>
+          </motion.div>
+        </div>
+        <div className={classes.root}>
+          <div className={classes.img1}>
+            <Image
+              src={"/icefrappuccino.jpg"}
+              alt={"images"}
+              width={800}
+              height={1000}
+            />
+          </div>
+          <div className={classes.text}>
+            <h3>DEATH BY CHOCOLATE</h3>
+            This that then twat. This that then twat. This that then twat. This
+            that then twat. This that then twat. This that then twat. This that
+            then twat. This that then twat. This that then twat. This that then
+            twat.This that then twat. This that then twat.
+            <div className={classes.rate}>rate: 156$</div>
+            <button className={classes.bt} onClick={handleClick}>
+              Order Now
+            </button>
+          </div>
+        </div>
+        <div className={classes.root}>
+          <div className={classes.img1}>
+            <Image
+              src={"/images (1).jpg"}
+              alt={"images"}
+              width={800}
+              height={1000}
+            />
+          </div>
+          <div className={classes.text}>
+            <h3>DEATH BY CHOCOLATE</h3>
+            This that then twat. This that then twat. This that then twat. This
+            that then twat. This that then twat. This that then twat. This that
+            then twat. This that then twat. This that then twat. This that then
+            twat.This that then twat. This that then twat.
+            <div className={classes.rate}>rate: 156$</div>
+            <button className={classes.bt} onClick={handleClick}>
+              Order Now
+            </button>
+          </div>
+        </div>
+        <div className={classes.root}>
+          <div className={classes.img1}>
+            <Image
+              src={"/black.webp"}
+              alt={"images"}
+              width={800}
+              height={1000}
+            />
+          </div>
+          <div className={classes.text}>
+            <h3>DEATH BY CHOCOLATE</h3>
+            This that then twat. This that then twat. This that then twat. This
+            that then twat. This that then twat. This that then twat. This that
+            then twat. This that then twat. This that then twat. This that then
+            twat.This that then twat. This that then twat.
+            <div className={classes.rate}>rate: 156$</div>
+            <button className={classes.bt} onClick={handleClick}>
+              Order Now
+            </button>
+          </div>
+        </div>
       </div>
-      <div className={classes.root}>
-        <div className={classes.img1}>
-          <Image
-            src={"/icefrappuccino.jpg"}
-            alt={"images"}
-            width={800}
-            height={1000}
-          />
-        </div>
-        <div className={classes.text}>
-          <h3>DEATH BY CHOCOLATE</h3>
-          This that then twat. This that then twat. This that then twat. This
-          that then twat. This that then twat. This that then twat. This that
-          then twat. This that then twat. This that then twat. This that then
-          twat.This that then twat. This that then twat.
-          <div className={classes.rate}>rate: 156$</div>
-          <button className={classes.bt}>Order Now</button>
-        </div>
-      </div>
-      <div className={classes.root}>
-        <div className={classes.img1}>
-          <Image
-            src={"/images (1).jpg"}
-            alt={"images"}
-            width={800}
-            height={1000}
-          />
-        </div>
-        <div className={classes.text}>
-          <h3>DEATH BY CHOCOLATE</h3>
-          This that then twat. This that then twat. This that then twat. This
-          that then twat. This that then twat. This that then twat. This that
-          then twat. This that then twat. This that then twat. This that then
-          twat.This that then twat. This that then twat.
-          <div className={classes.rate}>rate: 156$</div>
-          <button className={classes.bt}>Order Now</button>
-        </div>
-      </div>
-      <div className={classes.root}>
-        <div className={classes.img1}>
-          <Image src={"/black.webp"} alt={"images"} width={800} height={1000} />
-        </div>
-        <div className={classes.text}>
-          <h3>DEATH BY CHOCOLATE</h3>
-          This that then twat. This that then twat. This that then twat. This
-          that then twat. This that then twat. This that then twat. This that
-          then twat. This that then twat. This that then twat. This that then
-          twat.This that then twat. This that then twat.
-          <div className={classes.rate}>rate: 156$</div>
-          <button className={classes.bt}>Order Now</button>
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 export default MenuSection1;

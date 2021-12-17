@@ -11,6 +11,8 @@ const useStyles = makeStyles((theme) => ({
     gap: "1rem",
     display: "flex",
     color: "white",
+    position: "sticky",
+    width: "100%",
     // flexDirection: "row",
     justifyContent: "space-between",
     boxShadow:
@@ -34,6 +36,10 @@ const useStyles = makeStyles((theme) => ({
   h: {
     fontSize: "1.5rem",
     padding: "2rem",
+  },
+  h2: {
+    margin: "2rem 3rem 2rem 0rem",
+    padding: "1rem",
   },
 }));
 
@@ -65,8 +71,19 @@ const Header = () => {
         <Link href="#contact">
           <a className={classes.h}>Contact</a>
         </Link>
-        <Link href="/LoginLJP">
+        <Link href="/LoginLjp">
           <a className={classes.h}>Login</a>
+        </Link>
+        <Link href="/Cart">
+          <a className={classes.h2}>
+            <Image
+              src="/cart.png"
+              alt="cart"
+              width={38}
+              height={28}
+              className={classes.h2}
+            />
+          </a>
         </Link>
       </div>
     </div>

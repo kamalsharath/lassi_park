@@ -2,6 +2,8 @@ import React from "react";
 import { makeStyles } from "@material-ui/styles";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import MuiAlert from "@material-ui/lab/Alert";
+import { Snackbar } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   mn: {
@@ -70,12 +72,32 @@ const useStyles = makeStyles((theme) => ({
     color: "red",
   },
 }));
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
 
 const MenuSection2 = () => {
   const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
+
+  const handleClick = (event) => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpen(false);
+  };
 
   return (
     <div className={classes.mn}>
+      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="success">
+          Added to cart
+        </Alert>
+      </Snackbar>
       <div className={classes.juice}>
         <motion.div
           animate={{ x: 100 }}
@@ -95,7 +117,9 @@ const MenuSection2 = () => {
           then twat. This that then twat. This that then twat. This that then
           twat.This that then twat. This that then twat.
           <div className={classes.rate}>rate: 109$</div>
-          <button className={classes.bt}>Order Now</button>
+          <button className={classes.bt} onClick={handleClick}>
+            Order Now
+          </button>
         </div>
       </div>
       <div className={classes.root}>
@@ -114,7 +138,9 @@ const MenuSection2 = () => {
           then twat. This that then twat. This that then twat. This that then
           twat.This that then twat. This that then twat.
           <div className={classes.rate}>rate: 116$</div>
-          <button className={classes.bt}>Order Now</button>
+          <button className={classes.bt} onClick={handleClick}>
+            Order Now
+          </button>
         </div>
       </div>
       <div className={classes.root}>
@@ -128,7 +154,9 @@ const MenuSection2 = () => {
           then twat. This that then twat. This that then twat. This that then
           twat.This that then twat. This that then twat.
           <div className={classes.rate}>rate: 101$</div>
-          <button className={classes.bt}>Order Now</button>
+          <button className={classes.bt} onClick={handleClick}>
+            Order Now
+          </button>
         </div>
       </div>
     </div>

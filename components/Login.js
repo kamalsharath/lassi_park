@@ -89,7 +89,7 @@ const Login = () => {
               />
             </Typography>
             <Typography>
-              <button className={classes.bt}>Login</button>
+              <button  variant="submit"className={classes.bt}>Login</button>
             </Typography>
           </div>
         </div>

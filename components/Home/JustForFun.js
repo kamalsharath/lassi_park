@@ -40,15 +40,6 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "2.5rem",
     lineHeight: "3rem",
     color: "white",
-    // // margin: '1rem 0rem 1rem 0rem',
-    // [theme.breakpoints.down("sm")]: {
-    //   fontSize: "2.5rem",
-    //   lineHeight: "1.75rem",
-    // },
-    // [theme.breakpoints.down("xs")]: {
-    //   fontSize: "2rem",
-    //   lineHeight: "1.75rem",
-    // },
   },
   heading1: {
     width: "100%",
@@ -57,15 +48,6 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1.5rem",
     lineHeight: "1.5rem",
     color: "#fff",
-    // margin: '0rem 0rem 0.5rem 0rem',
-    // [theme.breakpoints.down("sm")]: {
-    //   fontSize: "1.5rem",
-    //   lineHeight: "1.5rem",
-    // },
-    // [theme.breakpoints.down("xs")]: {
-    //   fontSize: "1.25rem",
-    //   lineHeight: "1.5rem",
-    // },
   },
   subHeading: {
     margin: "0.5rem 0rem 0.5rem 0rem",
@@ -75,10 +57,6 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1.1rem",
     lineHeight: "1.5rem",
     color: "#fff",
-    // [theme.breakpoints.down("sm")]: {
-    //   fontSize: "1rem",
-    //   lineHeight: "1.5rem",
-    // },
   },
   text: {
     display: "flex",
