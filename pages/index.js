@@ -1,5 +1,3 @@
-import Head from "next/head";
-import Image from "next/image";
 import ContactUs from "../components/Home/ContactUs";
 import JustForFun from "../components/Home/JustForFun";
 import SectionOne from "../components/Home/SectionOne";
@@ -11,7 +9,6 @@ export default function Home() {
     <>
       <Layout>
         <SectionOne />
-
         <SectionTwo />
         <JustForFun />
         <ContactUs />

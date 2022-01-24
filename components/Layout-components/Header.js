@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     gap: "1rem",
     display: "flex",
     color: "white",
-    position: "sticky",
+    position: "relative",
     width: "100%",
     // flexDirection: "row",
     justifyContent: "space-between",
@@ -38,8 +38,8 @@ const useStyles = makeStyles((theme) => ({
     padding: "2rem",
   },
   h2: {
-    margin: "2rem 3rem 2rem 0rem",
-    padding: "1rem",
+    margin: "7rem 3rem 7rem 3rem",
+    width: "100%",
   },
 }));
 
@@ -79,7 +79,7 @@ const Header = () => {
             <Image
               src="/cart.png"
               alt="cart"
-              width={38}
+              width={28}
               height={28}
               className={classes.h2}
             />

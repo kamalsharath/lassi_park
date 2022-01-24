@@ -30,17 +30,17 @@ const AllOrders = async (req, res) => {
 
   const orderSchema = new Schema(
     {
-      order_id: Number,
-      username: String,
+      id: Number,
+      name: String,
     },
-    { collection: "order" }
+    { collection: "store" }
   );
 
   /* Model */
 
-  const Orders = mongoose.models.Order1
-    ? mongoose.models.Order1
-    : mongoose.model("Order1", orderSchema);
+  const Order = mongoose.models.Order
+    ? mongoose.models.Order
+    : mongoose.model("Order", orderSchema);
 
   await mongoose.connect(
     "mongodb+srv://dbuser:dbuser@cluster0.jyhfv.mongodb.net/lassipark?retryWrites=true&w=majority",
@@ -49,7 +49,7 @@ const AllOrders = async (req, res) => {
       useUnifiedTopology: true,
     }
   );
-  const data = await Orders.find();
+  const data = await Order.find();
   res.statusCode = 200;
   res.setHeader("Content-Type", "application/json");
   res.end(JSON.stringify(data));
@@ -57,3 +57,4 @@ const AllOrders = async (req, res) => {
 };
 
 export default AllOrders;
+

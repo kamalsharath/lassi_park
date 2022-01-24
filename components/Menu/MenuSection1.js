@@ -22,10 +22,10 @@ const useStyles = makeStyles((theme) => ({
 
     boxShadow:
       "0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%)",
-    "&:hover": {
-      border: "1px solid",
-      color: "white",
-    },
+    // "&:hover": {
+    //   border: "1px solid",
+    //   // color: "white",
+    // },
   },
   img1: {
     width: "200",
@@ -87,8 +87,18 @@ function Alert(props) {
 const MenuSection1 = () => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
-
+  const [order, setOrder] = React.useState();
   const handleClick = (event) => {
+    setOrder(event.currentTarget.id);
+    setOpen(true);
+    fetch("/api/store-order?").then((res) => {
+      res
+        .json()
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((err) => console.log(err));
+    });
     setOpen(true);
   };
 
