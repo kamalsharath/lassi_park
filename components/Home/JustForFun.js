@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     height: "100vh",
-    boxShadow: " 0 0 1rem 0.2rem rgb(0 0 0 / 80%)",
+    boxShadow: " 0 0 0rem 0.2rem rgb(0 0 0 / 80%)",
     padding: "0px 50px 0px 0px",
   },
   megaContainer1: {
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     height: "100vh",
-    boxShadow: " 0 0 1rem 0.2rem rgb(0 0 0 / 80%)",
+    boxShadow: " 0 0 0rem 0.2rem rgb(0 0 0 / 80%)",
   },
   megaContainer2: {
     backgroundImage: `url(s3.jpg)`,
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     height: "100vh",
-    boxShadow: " 0 0 1rem 0.2rem rgb(0 0 0 / 80%)",
+    boxShadow: " 0 0 0rem 0.2rem rgb(0 0 0 / 80%)",
 
     marginBottom: "10rem",
   },

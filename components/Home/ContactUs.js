@@ -66,6 +66,32 @@ const useStyles = makeStyles((theme) => ({
 
 const ContactUs = () => {
   const classes = useStyles();
+  const [name, setName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [message, setMessage] = React.useState("");
+
+  const textFeildOne = (event) => {
+    setName(event.target.value);
+  };
+  const textFeildTwo = (event) => {
+    setEmail(event.target.value);
+  };
+  const textFeildThree = (event) => {
+    setMessage(event.target.value);
+  };
+
+  const submitForm = (e) => {
+    fetch(
+      "/api/contact?name=" + name + "&email=" + email + "&message=" + message
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
   return (
     <div className={classes.constact} id="contact">
       <div className={classes.sec}>
@@ -83,8 +109,10 @@ const ContactUs = () => {
                 <input
                   type="text"
                   className={classes.inp}
+                  value={name}
                   id="name"
                   placeholder="Enter your name"
+                  onChange={textFeildOne}
                 />
               </div>
               <div className={classes.frm}>
@@ -93,6 +121,8 @@ const ContactUs = () => {
                   type="email"
                   className={classes.inp}
                   id="email"
+                  value={email}
+                  onChange={textFeildTwo}
                   placeholder="Enter your email"
                 />
               </div>
@@ -102,11 +132,17 @@ const ContactUs = () => {
                   className={classes.inp}
                   id="message"
                   rows="3"
+                  value={message}
+                  onChange={textFeildThree}
                   placeholder="Enter your message"
                 ></textarea>
               </div>
               <div className={classes.btC}>
-                <button type="submit" className={classes.bt}>
+                <button
+                  type="submit"
+                  className={classes.bt}
+                  onClick={submitForm}
+                >
                   Submit
                 </button>
               </div>

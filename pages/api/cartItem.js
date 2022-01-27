@@ -23,24 +23,23 @@ function runMiddleware(req, res, fn) {
 
 /* API Route */
 
-const AllOrders = async (req, res) => {
+const Cart = async (req, res) => {
   await runMiddleware(req, res, cors);
 
   /* Schema */
 
   const orderSchema = new Schema(
     {
-      order_id: Number,
-      username: String,
+      name: String,
     },
-    { collection: "order" }
+    { collection: "contact" }
   );
 
   /* Model */
 
-  const Order = mongoose.models.Gg
-    ? mongoose.models.Gg
-    : mongoose.model("Gg", orderSchema);
+  const Order = mongoose.models.Carts
+    ? mongoose.models.Carts
+    : mongoose.model("Carts", orderSchema);
 
   await mongoose.connect(
     "mongodb+srv://dbuser:dbuser@cluster0.jyhfv.mongodb.net/lassipark?retryWrites=true&w=majority",
@@ -56,4 +55,4 @@ const AllOrders = async (req, res) => {
   // mongoose.connection.close();
 };
 
-export default AllOrders;
+export default Cart;
